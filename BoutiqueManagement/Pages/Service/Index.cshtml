@@ -1,0 +1,66 @@
+﻿@page
+@model BoutiqueManagement.Pages.Service.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stock Avalible in Shop</h1>
+
+<p>
+    <a asp-page="Create">Add New Products</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].DressName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].DressId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Services[0].Customer_ID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Services) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DressName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DressId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_ID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Service_ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Service_ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Service_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

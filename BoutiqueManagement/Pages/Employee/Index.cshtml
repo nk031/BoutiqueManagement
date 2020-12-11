@@ -1,0 +1,66 @@
+﻿@page
+@model BoutiqueManagement.Pages.Employee.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Working Staff Data</h1>
+
+<p>
+    <a asp-page="Create">Add Employee Detail Here</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].StaffName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].StaffEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].StaffMobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].JionningDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff[0].Visa_Finshing_Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Staff) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JionningDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visa_Finshing_Date)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Staff_ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Staff_ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Staff_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

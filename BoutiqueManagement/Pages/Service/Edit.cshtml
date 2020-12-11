@@ -1,0 +1,60 @@
+﻿@page
+@model BoutiqueManagement.Pages.Service.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Services</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Services.Service_ID" />
+            <div class="form-group">
+                <label asp-for="Services.DressName" class="control-label"></label>
+                <input asp-for="Services.DressName" class="form-control" />
+                <span asp-validation-for="Services.DressName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Services.Price" class="control-label"></label>
+                <input asp-for="Services.Price" class="form-control" />
+                <span asp-validation-for="Services.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Services.Size" class="control-label"></label>
+                <input asp-for="Services.Size" class="form-control" />
+                <span asp-validation-for="Services.Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Services.DressId" class="control-label"></label>
+                <input asp-for="Services.DressId" class="form-control" />
+                <span asp-validation-for="Services.DressId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Services.Item" class="control-label"></label>
+                <input asp-for="Services.Item" class="form-control" />
+                <span asp-validation-for="Services.Item" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Services.Customer_ID" class="control-label"></label>
+                <input asp-for="Services.Customer_ID" class="form-control" />
+                <span asp-validation-for="Services.Customer_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
