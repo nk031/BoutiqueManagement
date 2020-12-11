@@ -9,6 +9,8 @@
     CONSTRAINT [PK_Staff] PRIMARY KEY CLUSTERED ([Staff_ID] ASC)
 );
 
+
+
 CREATE TABLE [dbo].[Services] (
     [Service_ID]              INT            IDENTITY (1, 1) NOT NULL,
     [DressName]               NVARCHAR (MAX) NULL,
@@ -27,7 +29,8 @@ GO
 CREATE NONCLUSTERED INDEX [IX_Services_Customer_objCustomer_ID]
     ON [dbo].[Services]([Customer_objCustomer_ID] ASC);
 
-CREATE TABLE [dbo].[OnlineOrder] (
+
+    CREATE TABLE [dbo].[OnlineOrder] (
     [OnlineOrder_ID]        INT            IDENTITY (1, 1) NOT NULL,
     [NewOrder]              NVARCHAR (MAX) NULL,
     [Purchaser_Name]        NVARCHAR (MAX) NULL,
@@ -62,11 +65,9 @@ GO
 CREATE NONCLUSTERED INDEX [IX_CustomerDetail_Staff_objStaff_ID]
     ON [dbo].[CustomerDetail]([Staff_objStaff_ID] ASC);
 
-
-    CREATE TABLE [dbo].[__EFMigrationsHistory] (
+CREATE TABLE [dbo].[__EFMigrationsHistory] (
     [MigrationId]    NVARCHAR (150) NOT NULL,
     [ProductVersion] NVARCHAR (32)  NOT NULL,
     CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED ([MigrationId] ASC)
 );
-
 
