@@ -115,7 +115,7 @@ namespace BoutiqueManagement.Migrations
                 table: "Services",
                 column: "Customer_objCustomer_ID");
 
-            var sqlFile = Path.Combine(".\\DatabaseScript", @"data.sql");
+            var sqlFile = Path.Combine(".\\DataScript", @"Q.sql");
             migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
 
