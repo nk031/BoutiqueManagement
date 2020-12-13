@@ -1,0 +1,7 @@
+﻿SET IDENTITY_INSERT [dbo].[Staff] ON
+INSERT INTO [dbo].[Staff] ([Staff_ID], [StaffName], [StaffEmail], [StaffMobile], [Address], [JionningDate], [Visa_Finshing_Date]) VALUES (1, N'Yashmin', N'ahmedyass234@gmail.com', N'0223456789', N'21 maitland street frankton', N'2020-08-05 10:00:00', N'2022-01-04 15:04:00')
+INSERT INTO [dbo].[Staff] ([Staff_ID], [StaffName], [StaffEmail], [StaffMobile], [Address], [JionningDate], [Visa_Finshing_Date]) VALUES (2, N'Navjot kaur', N'Kkaaurnavjot26@gmail.com', N'0225068196', N'10 te aroha street ', N'2020-10-14 10:00:00', N'2021-06-04 00:00:00')
+INSERT INTO [dbo].[Staff] ([Staff_ID], [StaffName], [StaffEmail], [StaffMobile], [Address], [JionningDate], [Visa_Finshing_Date]) VALUES (3, N'Pihu', N'payalpihu23@gmail.com', N'02345678922', N'East tamaki ', N'2020-10-20 09:59:00', N'2021-04-22 15:15:00')
+INSERT INTO [dbo].[Staff] ([Staff_ID], [StaffName], [StaffEmail], [StaffMobile], [Address], [JionningDate], [Visa_Finshing_Date]) VALUES (4, N'Karel', N'Muralkarel45@gmail.com', N'0223337788', N'pyespa tauranga tauranga', N'2020-12-01 11:00:00', N'2021-11-11 15:16:00')
+INSERT INTO [dbo].[Staff] ([Staff_ID], [StaffName], [StaffEmail], [StaffMobile], [Address], [JionningDate], [Visa_Finshing_Date]) VALUES (5, N'ritu', N'himahh76@gmail.com', N'0221007473', N'83 waterside Dr', N'2020-11-15 10:00:00', N'2022-02-11 12:00:00')
+SET IDENTITY_INSERT [dbo].[Staff] OFF
