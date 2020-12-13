@@ -13,8 +13,12 @@ namespace BoutiqueManagement.Models
         public string StaffName { get; set; } // Staff Name on Shifts
         public string StaffEmail { get; set; }// Staff Email 
         public string StaffMobile { get; set; }// Staff Mobile 
-        public string Address { get; set; }//Address of staff member 
+        public string Address { get; set; }//Address of staff member
+
+        [DataType(DataType.Date)]
         public DateTime JionningDate { get; set; } //when they join this job
+        
+         [DataType(DataType.Date)]
         public DateTime Visa_Finshing_Date { get; set; }// visa deatil for working eligibility
 
 
